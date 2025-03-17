@@ -64,3 +64,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+Aplikacja pozwala na na zarządzanie zwierzętami w API PetStore i umoliwia dodawanie nowego zwierzaka do spisu, usuwanie, edycję rekordu oraz wyszukiwanie po ID.
+
+INSTALACJA
+1. Sklonuj repozytorium.
+2. Zainstaluj zaleznosci.
+3. Utworz plik .env i skonfiguruj aplikacje.
+4. Uruchom serwer uzywajac 'php artisan serve'
+
+ENDPOINT: /pet/add
+Formularz dodawania nowego zwierzęcia do API PetStor pozwala na wpisanie nazwy - czyli imienia, tagów - w tym rodzaju zwierzaka i znaków szczególnych, aby zaznaczyć więcej niz jeden tag nalezy uzyc przyciskow ctrl+prawy przycisk myszy, url zdjęcia, oraz jego statusu. Wymaganymi polami do zapisu jest nazwa oraz zdjęcie, w polu status jeśli niczego nie wpszemy automatycznie zapisze się avaliable.
+
+ENDPOINT: /pet/edit
+Formularz edytowania istniejącego zwierzęcia pozwala na edycje wcześniej wpisanych danych na podstawie wpisanego przez nas ID - jest to niezbędne pole do tego aby proces edycji się powiódł. Czyli podsumowując wpisujemy ID, następnie resztę danych które chcemy zmienić. Te których zmienić nie chcemy nie zostaną napisane pustymi polami.
+
+ENDPOINT: /pet/delete
+Formularz usuwania wpisu ze zwierzakiem pozwala właśnie na usunięcie wpisu, wystarczy wpisać konkretne ID oraz zatwierdzić przyciskiem.
+
+ENDPOINT: /pet/find
+Formularz wyszukiwania pozwala na wyszukanie danego rekordu po wpisaniu ID oraz zatwierdzeniu przyciskiem.
